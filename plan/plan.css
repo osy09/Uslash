@@ -308,9 +308,18 @@ body {
     background-color: #f0f0f0;
 }
 
-.nav-item.active svg path {
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item.active svg path,
+.nav-item.active svg rect,
+.nav-item.active svg line,
+.nav-item.active svg circle {
     stroke: #A963FF !important;
-    fill: #A963FF !important;
+    fill: none !important;
 }
 
 .nav-item.active span {
@@ -318,8 +327,8 @@ body {
 }
 
 .nav-item svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .nav-item span {
