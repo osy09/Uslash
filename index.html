@@ -3,12 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>로그인 - U/</title>
 </head>
 <body>
-    <h1>안녕하세요, HTML 문서입니다!</h1>
-    <p>이것은 예시 문서로, HTML 구조를 보여줍니다.</p>
-    <script src="script.js"></script>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="welcome-title">U/에 오신걸 환영합니다</h1>
+            <p class="welcome-subtitle">회원 서비스 이용을 위해 로그인 해주세요</p>
+        </div>
+
+        <!-- Form -->
+        <div class="form-container">
+            <form id="loginForm" novalidate>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="userId" 
+                        class="input-field" 
+                        placeholder="아이디"
+                        autocomplete="username"
+                        required
+                    >
+                    <div class="error-message" id="userIdError"></div>
+                </div>
+
+                <div class="input-group">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="input-field" 
+                        placeholder="비밀번호"
+                        autocomplete="current-password"
+                        required
+                    >
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <!-- Links -->
+                <div class="links-container">
+                    <a href="#" class="link" id="findId">아이디 찾기</a>
+                    <a href="#" class="link" id="findPassword">비밀번호 찾기</a>
+                    <a href="#" class="link" id="signUp">회원가입</a>
+                </div>
+
+                <!-- Login button -->
+                <button type="submit" class="login-button" id="loginButton">
+                    로그인 하기
+                </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
