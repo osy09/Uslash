@@ -73,7 +73,7 @@ body {
 }
 
 .input-field:focus {
-    border-bottom-color: #8B5FBF;
+    border-bottom-color: #A963FF;
 }
 
 .input-field::placeholder {
@@ -84,9 +84,11 @@ body {
 /* Links section */
 .links-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin: 40px 0 60px 0;
     padding: 0 4px;
+    gap: 24px;
 }
 
 .link {
@@ -105,7 +107,7 @@ body {
 }
 
 .link:hover {
-    color: #8B5FBF;
+    color: #A963FF;
 }
 
 /* Login button */
@@ -119,8 +121,10 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-top: auto;
-    margin-bottom: 20px;
+    margin: auto 0 20px 0;
+    width: 100%;
+    max-width: 350px;
+    align-self: center;
 }
 
 .login-button:hover {
