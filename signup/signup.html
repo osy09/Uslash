@@ -42,7 +42,7 @@
 
             <!-- Email Field -->
             <div class="form-group">
-                <label for="email">이메일</label>
+                <label for="emailLocal">이메일</label> <!-- 이 부분을 'for="emailLocal"'로 수정했습니다. -->
                 <div class="email-container">
                     <input type="text" id="emailLocal" name="emailLocal" placeholder="이메일" required>
                     <span class="at-symbol">@</span>
@@ -67,7 +67,7 @@
                 <label for="phone">휴대폰 번호</label>
                 <div class="input-with-button">
                     <input type="tel" id="phone" name="phone" placeholder="휴대폰 번호" required>
-                    <button type="button" id="sendVerificationBtn" class="purple-btn small-btn">인증번호 발기</button>
+                    <button type="button" id="sendVerificationBtn" class="purple-btn small-btn">인증번호 받기</button>
                 </div>
                 <div id="phoneError" class="error-message"></div>
                 <div id="phoneSuccess" class="success-message"></div>
@@ -96,6 +96,6 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="signup.js"></script>
 </body>
 </html>

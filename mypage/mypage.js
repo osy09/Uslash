@@ -1,5 +1,3 @@
-// 앱의 상호작용성을 위한 간단한 스크립트
-
 document.addEventListener('DOMContentLoaded', function() {
     // 편집 버튼 클릭 이벤트
     const editButton = document.querySelector('.edit-button');
@@ -30,4 +28,28 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
         });
     });
+
+    // 즐겨찾기 데이터 서버에서 불러오기
+    const favoritesGrid = document.querySelector('.favorites-grid');
+
+    fetch('http://localhost:8080/api/favorites') // ← 서버 API 주소로 수정하세요
+        .then(response => response.json())
+        .then(favorites => {
+            // 기존 즐겨찾기 항목 제거 (add-item 제외)
+            document.querySelectorAll('.grid-item:not(.add-item)').forEach(el => el.remove());
+
+            // 서버에서 받아온 즐겨찾기 항목을 추가
+            favorites.forEach(item => {
+                const div = document.createElement('div');
+                div.classList.add('grid-item');
+                div.innerHTML = `
+                    <div class="favorite-thumbnail" style="background-image: url('${item.image}')"></div>
+                    <div class="favorite-title">${item.title}</div>
+                `;
+                favoritesGrid.insertBefore(div, document.querySelector('.add-item'));
+            });
+        })
+        .catch(error => {
+            console.error('즐겨찾기 불러오기 실패:', error);
+        });
 });
