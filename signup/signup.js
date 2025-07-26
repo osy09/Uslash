@@ -11,6 +11,12 @@ class SignupForm {
     }
 
     initializeEventListeners() {
+        // 로그인 상태 체크
+        if (AuthManager.isLoggedIn()) {
+            window.location.href = '../find/find.html';
+            return;
+        }
+
         // Form submission
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
 
@@ -154,8 +160,8 @@ class SignupForm {
             return;
         }
 
-        const users = this.getUsers();
-        const isDuplicate = users.some(user => user.userId === userId);
+        const users = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+        const isDuplicate = users.some(user => user.id === userId);
 
         // 실제 API 호출처럼 딜레이를 줍니다.
         setTimeout(() => {
@@ -343,44 +349,54 @@ class SignupForm {
         if (isValid) {
             console.log('All form validations passed. Attempting to save user data.');
 
-            // --- 회원가입 데이터 로컬 스토리지에 저장 ---
-            const users = this.getUsers();
+            // --- AuthManager를 통한 회원가입 처리 ---
             const newUser = {
-                userId: userId,
-                // 실제 앱에서는 비밀번호를 해싱하여 저장해야 합니다. (보안 경고)
+                id: userId,
                 password: password,
                 email: `${emailLocal}@${fullEmailDomain}`,
                 phone: phone
             };
 
-            users.push(newUser);
-            this.saveUsers(users);
+            const signupResult = AuthManager.signup(newUser);
 
-            alert('회원가입이 완료되었습니다!');
-            console.log('회원가입 성공:', newUser);
-            console.log('Current users in Local Storage:', this.getUsers());
+            if (signupResult.success) {
+                // 회원가입 성공 시 자동으로 로그인 처리
+                AuthManager.login({
+                    id: newUser.id,
+                    email: newUser.email,
+                    name: newUser.name
+                });
+                
+                alert('회원가입이 완료되었습니다! 메인 페이지로 이동합니다.');
+                console.log('회원가입 성공:', newUser);
 
-            // 폼 초기화 및 상태 초기화
-            this.form.reset();
-            this.clearAllMessages();
-            this.isIdChecked = false;
-            this.isPhoneVerified = false;
-            document.getElementById('verificationGroup').style.display = 'none';
-            document.getElementById('customDomain').style.display = 'none';
-            // 타이머가 동작 중이라면 중지
-            if (this.verificationTimer) {
-                clearInterval(this.verificationTimer);
-                document.getElementById('verificationTimer').textContent = '';
+                // 폼 초기화 및 상태 초기화
+                this.form.reset();
+                this.clearAllMessages();
+                this.isIdChecked = false;
+                this.isPhoneVerified = false;
+                document.getElementById('verificationGroup').style.display = 'none';
+                document.getElementById('customDomain').style.display = 'none';
+                
+                // 타이머가 동작 중이라면 중지
+                if (this.verificationTimer) {
+                    clearInterval(this.verificationTimer);
+                    document.getElementById('verificationTimer').textContent = '';
+                }
+                
+                // 인증 번호 필드와 버튼 활성화 (다음 회원가입을 위해)
+                document.getElementById('verificationCode').disabled = false;
+                document.getElementById('verifyCodeBtn').disabled = false;
+
+                // 메인 페이지로 리다이렉트
+                setTimeout(() => {
+                    window.location.href = '../find/find.html';
+                }, 1500);
+                
+            } else {
+                alert(signupResult.message);
+                console.log('회원가입 실패:', signupResult.message);
             }
-            // 인증 번호 필드와 버튼 활성화 (다음 회원가입을 위해)
-            document.getElementById('verificationCode').disabled = false;
-            document.getElementById('verifyCodeBtn').disabled = false;
-
-
-            // 로그인 페이지로 리다이렉트 (HTML 주석 해제 후 사용)
-            // setTimeout(() => { // 사용자에게 완료 메시지를 보여줄 시간을 주기 위해 딜레이
-            //     window.location.href = '../login/login.html';
-            // }, 1500);
 
         } else {
             console.log('Form validation failed. Please check error messages.');
