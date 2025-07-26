@@ -84,7 +84,7 @@ input::placeholder {
 }
 
 .purple-btn {
-    background-color: #8B5CF6;
+    background-color: #A963FF;
     color: white;
     border: none;
     border-radius: 8px;
@@ -96,11 +96,11 @@ input::placeholder {
 }
 
 .purple-btn:hover {
-    background-color: #7C3AED;
+    background-color: #A963FF;
 }
 
 .purple-btn:active {
-    background-color: #6D28D9;
+    background-color: #A963FF;
 }
 
 .small-btn {
@@ -237,6 +237,6 @@ input::placeholder {
 input:focus,
 select:focus,
 button:focus {
-    outline: 2px solid #8B5CF6;
+    outline: 2px solid #A963FF;
     outline-offset: 2px;
 }
