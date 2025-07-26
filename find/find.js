@@ -156,24 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     "routineTitle": "초급자 전신 운동",
                     "routineImage": "https://i.ytimg.com/vi/w0WQHVYKsss/sddefault.jpg",
                     "description": "운동 초급자를 위한 쉽고 효과적인 전신 운동 루틴입니다."
-                },
-                {
-                    "id": "diet_actor_1",
-                    "type": "식단",
-                    "category": "배우",
-                    "personName": "김배우",
-                    "routineTitle": "김배우 디톡스 주스",
-                    "routineImage": "https://m.nongshimmall.com/file_data/nsmall2022/2023/05/12/afdaa5f48896b256df3d82e899a597c9.jpg",
-                    "description": "몸 속 노폐물 배출을 돕는 디톡스 주스 레시피입니다."
-                },
-                {
-                    "id": "workout_idol_1",
-                    "type": "운동",
-                    "category": "아이돌",
-                    "personName": "박아이돌",
-                    "routineTitle": "박아이돌 유산소 댄스",
-                    "routineImage": "https://i.ytimg.com/vi/YMDdfzZcSiw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCEBnRAMvvYGG_wxBh0DzuNwKgBYg",
-                    "description": "칼로리 소모에 효과적인 유산소 댄스 루틴입니다."
                 }
             ];
             saveRoutinesToLocalStorage(initialRoutines);
