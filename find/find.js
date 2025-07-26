@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "가수",
                     "personName": "아이유",
                     "routineTitle": "사과 아침 식단",
-                    "routineImage": "https://via.placeholder.com/105x105?text=IU+Diet",
+                    "routineImage": "https://previews.123rf.com/images/belchonock/belchonock1504/belchonock150405021/38931531-sliced-apple-isolated-on-white.jpg",
                     "description": "사과 1개, 고구마 1개, 단백질 셰이크로 구성된 아침 식단입니다."
                 },
                 {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "가수",
                     "personName": "아이유",
                     "routineTitle": "IU 점심 식단",
-                    "routineImage": "https://via.placeholder.com/105x105?text=IU+Lunch",
+                    "routineImage": "https://img.cjthemarket.com/images/file/RVW/2025/0426/7f7c7c2b-8d6e-43ea-980c-adc3e3311a50_20250426132037_thum.jpg?SF=webp&RS=656",
                     "description": "닭가슴살 샐러드와 통밀빵 한 조각으로 이루어진 점심 식단입니다."
                 },
                 {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "가수",
                     "personName": "정국",
                     "routineTitle": "BTS 정국 근력 루틴",
-                    "routineImage": "https://via.placeholder.com/105x105?text=JK+Workout",
+                    "routineImage": "https://i.ytimg.com/vi/2knAJkotofM/maxresdefault.jpg",
                     "description": "고강도 인터벌 트레이닝과 전신 근력 운동으로 구성됩니다."
                 },
                 {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "배우",
                     "personName": "배수지",
                     "routineTitle": "수지 클린 식단",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Suzy+Diet",
+                    "routineImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPE3kFy8m4Zmi9pCsFawL2rz7I7UKbu2MvSw&s",
                     "description": "현미밥, 닭가슴살, 채소 위주의 건강한 식단입니다."
                 },
                 {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "배우",
                     "personName": "배수지",
                     "routineTitle": "수지 요가 스트레칭",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Suzy+Yoga",
+                    "routineImage": "https://mblogthumb-phinf.pstatic.net/MjAxODA3MDlfMjk1/MDAxNTMxMTA0NzMxMjM1.Y_h-20osTjG3yEaj0cGlPaC1YT3FC6QDvgb1f-2wfrYg.GJ9WXggDmKVDPL3NlSe1oSkCCpRJyMOUU0d1mF7-3dsg.JPEG.ed_sunny/image_3115686011531104536636.jpg?type=w800",
                     "description": "유연성 증진과 몸의 균형을 위한 요가 스트레칭 루틴입니다."
                 },
                 {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "배우",
                     "personName": "고윤정",
                     "routineTitle": "고윤정 다이어트",
-                    "routineImage": "https://via.placeholder.com/105x105?text=GYJ+Diet",
+                    "routineImage": "https://kormedi.com/wp-content/uploads/2024/01/gettyimages-1337501952.jpg",
                     "description": "단백질 위주와 저탄수 식단입니다."
                 },
                 {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "배우",
                     "personName": "고윤정",
                     "routineTitle": "고윤정 필라테스",
-                    "routineImage": "https://via.placeholder.com/105x105?text=GYJ+Pilates",
+                    "routineImage": "https://www.cosmopolitan.co.kr/resources_old/online/org_online_image/cp/0c8fbbbd-03d6-4c40-b978-60a1ddb2b323.jpg",
                     "description": "코어 강화와 자세 교정을 위한 필라테스 루틴입니다."
                 },
                 {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "아이돌",
                     "personName": "제니",
                     "routineTitle": "제니 해독 주스",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Jennie+Juice",
+                    "routineImage": "https://i1.daumcdn.net/thumb/C230x300/?fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FxqpEn%2FbtsIpy77VTU%2FAAAAAAAAAAAAAAAAAAAAAETZiH4vGPSGOdEQ6GQRLaCHvLVyF6V4vdOiPPuAtMQ-%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3DVtqjm5YgYQEe7Dpc140jFUl%252FUOI%253D",
                     "description": "신선한 채소와 과일로 만든 해독 주스 레시피입니다."
                 },
                 {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "아이돌",
                     "personName": "제니",
                     "routineTitle": "제니 댄스 트레이닝",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Jennie+Dance",
+                    "routineImage": "https://www.harpersbazaar.co.kr/resources_old/online/org_online_image/06db2716-3922-49e4-81f9-e6df9841f8eb.jpg",
                     "description": "유산소와 근력 운동을 결합한 댄스 트레이닝 루틴입니다."
                 },
                 {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "아이돌",
                     "personName": "제니",
                     "routineTitle": "제니 저염식단",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Jennie+Salt",
+                    "routineImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCKUHVzdS3jW-b040ZninZ8-jEaRosWzIAw&s",
                     "description": "염분 섭취를 최소화한 저염식 식단입니다."
                 },
                 {
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "가수",
                     "personName": "권은비",
                     "routineTitle": "사과 슬라이드",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Eunbi+Apple",
+                    "routineImage": "https://preview.free3d.com/img/2020/01/2279681175729473169/8c85qmsz.jpg",
                     "description": "사과를 슬라이스로 잘라 시간별로 섭취하여 하루에 사과 하나씩 섭취"
                 },
                 {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "가수",
                     "personName": "권은비",
                     "routineTitle": "은비 코어 운동",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Eunbi+Core",
+                    "routineImage": "https://preview.free3d.com/img/2020/01/2279681175729473169/8c85qmsz.jpg",
                     "description": "복근과 코어 강화를 위한 운동 루틴입니다."
                 },
                 {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "기타",
                     "personName": "일반인 A",
                     "routineTitle": "건강 유지 식단",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Healthy+Diet",
+                    "routineImage": "https://health.chosun.com/fileupload/healthcare_news/mdtoday_202104/20210401132202_20210401122353_60653cc9702da_1.jpg",
                     "description": "균형 잡힌 영양소 섭취를 위한 일반적인 식단입니다."
                 },
                 {
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "기타",
                     "personName": "트레이너 B",
                     "routineTitle": "초급자 전신 운동",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Beginner+Workout",
+                    "routineImage": "https://i.ytimg.com/vi/w0WQHVYKsss/sddefault.jpg",
                     "description": "운동 초급자를 위한 쉽고 효과적인 전신 운동 루틴입니다."
                 },
                 {
@@ -163,18 +163,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "배우",
                     "personName": "김배우",
                     "routineTitle": "김배우 디톡스 주스",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Actor+Diet",
+                    "routineImage": "https://m.nongshimmall.com/file_data/nsmall2022/2023/05/12/afdaa5f48896b256df3d82e899a597c9.jpg",
                     "description": "몸 속 노폐물 배출을 돕는 디톡스 주스 레시피입니다."
                 },
-                {
-                    "id": "workout_idol_1",
-                    "type": "운동",
-                    "category": "아이돌",
-                    "personName": "박아이돌",
-                    "routineTitle": "박아이돌 유산소 댄스",
-                    "routineImage": "https://via.placeholder.com/105x105?text=Idol+Dance",
-                    "description": "칼로리 소모에 효과적인 유산소 댄스 루틴입니다."
-                }
+
             ];
             saveRoutinesToLocalStorage(initialRoutines);
             routines = initialRoutines;
