@@ -466,3 +466,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // 페이지 로드 시 초기 루틴 표시
     filterAndDisplayRoutines(); // 초기에는 '식단' 탭, '가수' 카테고리 기준으로 표시
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addButton = document.querySelector('.add-button'); // Get the first add button, you might want to select all
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const closeButton = document.querySelector('.modal-close-button');
+
+    // Show modal when add button is clicked (example)
+    if (addButton) {
+        addButton.addEventListener('click', () => {
+            modalOverlay.classList.add('active');
+        });
+    }
+
+    // Hide modal when close button is clicked
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+        });
+    }
+
+    // Hide modal when clicking outside of the modal content
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+            }
+        });
+    }
+});
+
