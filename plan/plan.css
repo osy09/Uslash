@@ -247,7 +247,7 @@ h1 {
     background-color: #E8D6FF;
     border-radius: 20px;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 5px;
 }
 
@@ -268,7 +268,7 @@ h1 {
     line-height: 22px;
     text-align: center;
     position: absolute;
-    top: 12px;
+    top: 22px;
     left: 5px;
     width: 90px;
 }

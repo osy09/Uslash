@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'SF Pro', sans-serif;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 393px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Status Bar */
+.status-bar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.time {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.status-icons {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.signal-icon {
+    width: 19.2px;
+    height: 12.23px;
+    background-color: black;
+    clip-path: polygon(0 100%, 20% 50%, 40% 70%, 60% 40%, 80% 60%, 100% 20%, 100% 100%);
+}
+
+.wifi-icon {
+    width: 17.14px;
+    height: 12.33px;
+    background-color: black;
+    clip-path: polygon(50% 0, 100% 60%, 80% 60%, 50% 20%, 20% 60%, 0 60%);
+}
+
+.battery-icon {
+    width: 25px;
+    height: 13px;
+    border: 1px solid black;
+    border-radius: 4.3px;
+    position: relative;
+}
+
+.battery-icon::after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 9px;
+    left: 1px;
+    top: 1px;
+    background-color: black;
+    border-radius: 2.5px;
+}
+
+/* Search Button */
+.search-button {
+    width: 46px;
+    height: 46px;
+    background-color: #A963FF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon {
+    width: 21.5px;
+    height: 21.5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.search-icon::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(45deg);
+    right: -4px;
+    bottom: 0;
+}
+
+/* Tab Section */
+.tab-section {
+    display: flex;
+    margin-top: 151px;
+    padding: 0 20px;
+}
+
+.tab {
+    width: 167px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.tab.active {
+    background-color: #212121;
+    color: white;
+}
+
+.tab:not(.active) {
+    background-color: #D9D9D9;
+}
+
+.purple-text {
+    color: #A963FF;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #212121;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: 10px;
+    padding: 20px 0;
+    min-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+/* Category Filter */
+.category-filter {
+    display: flex;
+    padding: 16px;
+    gap: 10px;
+    max-width: 393px;
+    margin: 0 auto;
+}
+
+.filter-pill {
+    width: 78px;
+    height: 26px;
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: white;
+    color: black;
+}
+
+.filter-pill.active {
+    background-color: #A963FF;
+    color: white;
+}
+
+/* Diet Cards */
+.diet-cards {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 393px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 14px;
+    display: flex;
+    position: relative;
+    height: 133px;
+}
+
+.card-image {
+    width: 105px;
+    height: 105px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-content {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.card-title {
+    position: relative;
+}
+
+.card-title h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: #8E8E8E;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.card-description {
+    margin-top: 15px;
+    font-size: 11px;
+    line-height: 1.8;
+    color: #5F5F5F;
+}
+
+.add-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.plus-icon {
+    width: 17.5px;
+    height: 17.5px;
+    background-color: #A963FF;
+    position: relative;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+}
+
+.plus-icon::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.plus-icon::after {
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 393px;
+    height: 92px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-icon {
+    width: 33.75px;
+    height: 33.75px;
+    border-radius: 50%;
+    border: 2px solid #A963FF;
+    position: relative;
+}
+
+.explore-icon::before {
+    content: '';
+    position: absolute;
+    width: 16.59px;
+    height: 16.58px;
+    background-color: #A963FF;
+    border-radius: 50%;
+}
+
+.routine-icon {
+    width: 28.5px;
+    height: 30px;
+    border: 2px solid #BEBEBE;
+}
+
+.mypage-icon {
+    width: 27.75px;
+    height: 27.75px;
+    background-color: #BEBEBE;
+}
+
+.nav-text {
+    font-size: 10px;
+    font-weight: 600;
+    color: #BEBEBE;
+}
+
+.nav-item.active .nav-text {
+    color: #A963FF;
+}

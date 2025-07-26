@@ -1,16 +1,5 @@
-// login.js
 
-// 기존 TEST_USER는 이제 필요 없을 수 있습니다.
-// const TEST_USER = { id: 'testuser', pw: '1234' }; // 이 부분은 이제 사용되지 않습니다.
-
-window.addEventListener('DOMContentLoaded', () => {
-    const loggedInUser = localStorage.getItem('loggedInUser');
-    if (loggedInUser) {
-        alert(`${loggedInUser}님은 이미 로그인 상태입니다.`);
-        // location.href = './home.html'; // 로그인 후 이동할 페이지
-    }
-});
-
+// Get form elements
 const loginForm = document.getElementById('loginForm');
 const userIdInput = document.getElementById('userId');
 const passwordInput = document.getElementById('password');
@@ -18,133 +7,158 @@ const loginButton = document.getElementById('loginButton');
 const userIdError = document.getElementById('userIdError');
 const passwordError = document.getElementById('passwordError');
 
+// Link elements
 const findIdLink = document.getElementById('findId');
 const findPasswordLink = document.getElementById('findPassword');
 const signUpLink = document.getElementById('signUp');
 
-// --- 로컬 스토리지에서 사용자 목록을 가져오는 헬퍼 함수 추가 ---
-function getUsers() {
-    const users = localStorage.getItem('users');
-    try {
-        return users ? JSON.parse(users) : [];
-    } catch (e) {
-        console.error("Failed to parse users from localStorage:", e);
-        return []; // 파싱 오류 시 빈 배열 반환
-    }
-}
-// --- 헬퍼 함수 끝 ---
-
+// Validation functions
 function validateUserId(userId) {
-    return userId.trim() ? '' : '아이디를 입력해주세요.';
+    if (!userId.trim()) {
+        return '아이디를 입력해주세요.';
+    }
+    return '';
 }
 
 function validatePassword(password) {
-    return password.trim() ? '' : '비밀번호를 입력해주세요.';
+    if (!password.trim()) {
+        return '비밀번호를 입력해주세요.';
+    }
+    return '';
 }
 
-function showError(el, msg) {
-    el.textContent = msg;
-    el.style.display = msg ? 'block' : 'none';
+// Show error message
+function showError(element, message) {
+    element.textContent = message;
+    element.style.display = message ? 'block' : 'none';
 }
 
-function clearError(el) {
-    el.textContent = '';
-    el.style.display = 'none';
+// Clear error message
+function clearError(element) {
+    element.textContent = '';
+    element.style.display = 'none';
 }
 
-userIdInput.addEventListener('blur', () => {
-    showError(userIdError, validateUserId(userIdInput.value));
+// Real-time validation
+userIdInput.addEventListener('blur', function() {
+    const error = validateUserId(this.value);
+    showError(userIdError, error);
 });
 
-passwordInput.addEventListener('blur', () => {
-    showError(passwordError, validatePassword(passwordInput.value));
+passwordInput.addEventListener('blur', function() {
+    const error = validatePassword(this.value);
+    showError(passwordError, error);
 });
 
-userIdInput.addEventListener('input', () => {
-    if (userIdError.style.display === 'block') clearError(userIdError);
+// Clear errors on input
+userIdInput.addEventListener('input', function() {
+    if (userIdError.style.display === 'block') {
+        clearError(userIdError);
+    }
 });
 
-passwordInput.addEventListener('input', () => {
-    if (passwordError.style.display === 'block') clearError(passwordError);
+passwordInput.addEventListener('input', function() {
+    if (passwordError.style.display === 'block') {
+        clearError(passwordError);
+    }
 });
 
-loginForm.addEventListener('submit', (e) => {
+// Form submission
+loginForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const userId = userIdInput.value;
     const password = passwordInput.value;
 
+    // Clear previous errors
     clearError(userIdError);
     clearError(passwordError);
 
-    const userIdErr = validateUserId(userId);
-    const passwordErr = validatePassword(password);
+    // Validate inputs
+    const userIdErrorMsg = validateUserId(userId);
+    const passwordErrorMsg = validatePassword(password);
 
-    if (userIdErr) showError(userIdError, userIdErr);
-    if (passwordErr) showError(passwordError, passwordErr);
-    if (userIdErr || passwordErr) return;
+    let hasErrors = false;
 
+    if (userIdErrorMsg) {
+        showError(userIdError, userIdErrorMsg);
+        hasErrors = true;
+    }
+
+    if (passwordErrorMsg) {
+        showError(passwordError, passwordErrorMsg);
+        hasErrors = true;
+    }
+
+    if (hasErrors) {
+        return;
+    }
+
+    // Disable button during login process
     loginButton.disabled = true;
     loginButton.textContent = '로그인 중...';
 
+    // Simulate login process
     setTimeout(() => {
-        // --- 여기를 수정합니다: 로컬 스토리지에서 users 데이터를 가져와 비교 ---
-        const users = getUsers(); // 회원가입 데이터 가져오기
-        const foundUser = users.find(user => user.userId === userId && user.password === password);
-
-        if (foundUser) {
-            localStorage.setItem('loggedInUser', userId); // 로그인 성공 시 사용자 ID 저장
-            alert('로그인 성공!');
-            // location.href = './home.html'; // 실제 페이지 이동 시 주석 해제
-        } else {
-            alert('아이디 또는 비밀번호가 올바르지 않습니다.');
-        }
-        // --- 수정 끝 ---
-
+        // 로그인 성공 시 메인 페이지로 이동
+        alert(`로그인 성공!\n아이디: ${userId}`);
+        
+        // 실제 프로젝트에서는 서버 인증 후 토큰 저장 등을 수행
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userId', userId);
+        
+        // 메인 페이지 또는 대시보드로 이동
+        window.location.href = '../find/find.html';
+        
+        // Re-enable button
         loginButton.disabled = false;
         loginButton.textContent = '로그인 하기';
-    }, 1000); // 실제 서버 통신을 모방한 딜레이
+    }, 1000);
 });
 
-findIdLink.addEventListener('click', (e) => {
+// Link click handlers
+findIdLink.addEventListener('click', function(e) {
     e.preventDefault();
     alert('아이디 찾기 페이지로 이동합니다.');
+    // TODO: 실제 아이디 찾기 페이지 구현
 });
 
-findPasswordLink.addEventListener('click', (e) => {
+findPasswordLink.addEventListener('click', function(e) {
     e.preventDefault();
     alert('비밀번호 찾기 페이지로 이동합니다.');
+    // TODO: 실제 비밀번호 찾기 페이지 구현
 });
 
-signUpLink.addEventListener('click', (e) => {
+signUpLink.addEventListener('click', function(e) {
     e.preventDefault();
-    // 실제 회원가입 페이지로 이동하는 코드
-    // location.href = '../signup/signup.html';
-    alert('회원가입 페이지로 이동합니다.');
+    window.location.href = '../signup/signup.html';
 });
 
-// 모바일 키보드 최적화
+// Mobile keyboard handling
 function adjustViewportForKeyboard() {
     const inputs = [userIdInput, passwordInput];
+    
     inputs.forEach(input => {
-        input.addEventListener('focus', function () {
+        input.addEventListener('focus', function() {
             setTimeout(() => {
                 this.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 300);
         });
     });
 }
+
+// Initialize mobile optimizations
 adjustViewportForKeyboard();
 
-// iOS 확대 방지
+// Prevent zoom on input focus for iOS
 if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
     const inputs = document.querySelectorAll('input');
     inputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.style.fontSize = '16px';
+        input.addEventListener('focus', function() {
+            this.style.fontSize = '16px';
         });
-        input.addEventListener('blur', () => {
-            input.style.fontSize = '';
+        input.addEventListener('blur', function() {
+            this.style.fontSize = '';
         });
     });
 }
