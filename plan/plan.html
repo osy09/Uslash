@@ -270,6 +270,95 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 선택된 날짜의 루틴 표시 영역 -->
+            <div class="selected-date-routines" id="selectedDateRoutines">
+                <div class="no-routines" id="noRoutines">
+                    <div class="no-routines-content">
+                        <div class="no-routines-icon">📅</div>
+                        <h3>아직 일정이 없습니다</h3>
+                        <p>일정을 추가하시겠습니까?</p>
+                        <div class="routine-actions">
+                            <button class="btn-secondary" onclick="showRoutineOptions()">예</button>
+                            <button class="btn-primary" onclick="hideRoutinePrompt()">아니오</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 루틴 목록 (동적으로 생성) -->
+                <div class="routine-list" id="routineList" style="display: none;">
+                    <h3 class="routine-date-title">2025년 7월 26일 루틴</h3>
+                    <div class="routine-cards" id="routineCards">
+                        <!-- 루틴 카드들이 동적으로 추가됩니다 -->
+                    </div>
+                    <button class="add-routine-btn" onclick="showRoutineOptions()">
+                        <span>+</span> 루틴 추가
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 루틴 옵션 모달 -->
+        <div id="routineModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>루틴 추가 방법</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="option-cards">
+                        <div class="option-card" onclick="goToExplore()">
+                            <div class="option-icon">🔍</div>
+                            <h3>탐색에서 추가</h3>
+                            <p>다양한 연예인 루틴을 탐색하고 추가하세요</p>
+                        </div>
+                        <div class="option-card" onclick="addCustomRoutine()">
+                            <div class="option-icon">✍️</div>
+                            <h3>직접 입력</h3>
+                            <p>나만의 루틴을 직접 작성해보세요</p>
+                        </div>
+                        <div class="option-card" onclick="addFromFavorites()">
+                            <div class="option-icon">⭐</div>
+                            <h3>즐겨찾기에서</h3>
+                            <p>저장한 즐겨찾기 루틴을 추가하세요</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 커스텀 루틴 입력 모달 -->
+        <div id="customRoutineModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>직접 루틴 입력</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form id="customRoutineForm">
+                        <div class="form-group">
+                            <label for="routineTitle">루틴 제목</label>
+                            <input type="text" id="routineTitle" placeholder="예: 아침 운동, 점심 식단 등" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="routineDescription">상세 설명</label>
+                            <textarea id="routineDescription" placeholder="루틴에 대한 자세한 설명을 입력하세요" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="routineType">루틴 유형</label>
+                            <select id="routineType">
+                                <option value="diet">식단</option>
+                                <option value="exercise">운동</option>
+                                <option value="lifestyle">생활습관</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="closeCustomRoutineModal()">취소</button>
+                            <button type="submit" class="btn-primary">추가</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- 하단 네비게이션 -->
@@ -289,6 +378,27 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Bottom Navigation -->
+    <div class="bottom-navigation">
+        <a href="../find/find.html" class="nav-item">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">탐색</div>
+        </a>
+        <a href="plan.html" class="nav-item active">
+            <div class="nav-icon">📅</div>
+            <div class="nav-label">캘린더</div>
+        </a>
+        <a href="../mypage/mypage.html" class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">마이페이지</div>
+        </a>
+        <div class="nav-item" onclick="AuthManager.logout()">
+            <div class="nav-icon">🚪</div>
+            <div class="nav-label">로그아웃</div>
+        </div>
+    </div>
+
+    <script src="../auth.js"></script>
+    <script src="plan.js"></script>
 </body>
 </html>

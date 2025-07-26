@@ -63,17 +63,79 @@
                 </span>
             </div>
             
-            <div class="favorites-grid">
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item add-item">
+            <div class="favorites-grid" id="favoritesGrid">
+                <!-- 즐겨찾기 아이템들이 동적으로 추가됩니다 -->
+                <div class="grid-item add-item" id="addFavoriteBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="#333"/>
                     </svg>
                 </div>
+            </div>
+            
+            <!-- 즐겨찾기 없을 때 표시 -->
+            <div class="no-favorites" id="noFavorites" style="display: none;">
+                <p>아직 즐겨찾기한 루틴이 없습니다.</p>
+                <p>탐색 페이지에서 마음에 드는 루틴을 즐겨찾기해 보세요!</p>
+                <button class="go-explore-btn" onclick="window.location.href='../find/find.html'">
+                    탐색하러 가기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 즐겨찾기 상세 모달 -->
+    <div id="favoriteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>즐겨찾기 상세</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="favoriteModalImage" src="" alt="루틴 이미지">
+                </div>
+                <div class="modal-info">
+                    <h3 id="favoriteModalCelebrity">연예인 이름</h3>
+                    <h4 id="favoriteModalRoutineName">루틴명</h4>
+                    <p id="favoriteModalDescription">설명</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn remove-btn">즐겨찾기 제거</button>
+                <button class="modal-btn add-to-calendar-btn">캘린더에 추가</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 프로필 수정 모달 -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>프로필 수정</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="profileName">이름</label>
+                        <input type="text" id="profileName" placeholder="이름을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileEmail">이메일</label>
+                        <input type="email" id="profileEmail" placeholder="이메일을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileImage">프로필 사진</label>
+                        <input type="file" id="profileImage" accept="image/*">
+                        <div class="image-preview" id="imagePreview" style="display: none;">
+                            <img id="previewImg" src="" alt="미리보기">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="modal-btn cancel-btn">취소</button>
+                        <button type="submit" class="modal-btn save-btn">저장</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -100,6 +162,26 @@
             <span>마이 페이지</span>
         </div>
     </nav>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-navigation">
+        <a href="../find/find.html" class="nav-item">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">탐색</div>
+        </a>
+        <a href="../plan/plan.html" class="nav-item">
+            <div class="nav-icon">📅</div>
+            <div class="nav-label">캘린더</div>
+        </a>
+        <a href="mypage.html" class="nav-item active">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">마이페이지</div>
+        </a>
+        <div class="nav-item" onclick="AuthManager.logout()">
+            <div class="nav-icon">🚪</div>
+            <div class="nav-label">로그아웃</div>
+        </div>
+    </div>
 
     <script src="../auth.js"></script>
     <script src="./mypage.js"></script>

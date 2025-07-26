@@ -360,7 +360,14 @@ class SignupForm {
             const signupResult = AuthManager.signup(newUser);
 
             if (signupResult.success) {
-                alert('회원가입이 완료되었습니다!');
+                // 회원가입 성공 시 자동으로 로그인 처리
+                AuthManager.login({
+                    id: newUser.id,
+                    email: newUser.email,
+                    name: newUser.name
+                });
+                
+                alert('회원가입이 완료되었습니다! 메인 페이지로 이동합니다.');
                 console.log('회원가입 성공:', newUser);
 
                 // 폼 초기화 및 상태 초기화
@@ -381,9 +388,9 @@ class SignupForm {
                 document.getElementById('verificationCode').disabled = false;
                 document.getElementById('verifyCodeBtn').disabled = false;
 
-                // 로그인 페이지로 리다이렉트
+                // 메인 페이지로 리다이렉트
                 setTimeout(() => {
-                    window.location.href = '../login/login.html';
+                    window.location.href = '../find/find.html';
                 }, 1500);
                 
             } else {

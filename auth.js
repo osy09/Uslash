@@ -36,7 +36,7 @@ class AuthManager {
         localStorage.removeItem('userInfo');
         localStorage.removeItem('loginTime');
         this.clearUserData();
-        window.location.href = '../login/login.html';
+        window.location.href = '../index.html';
     }
     
     // 사용자 데이터 클리어
