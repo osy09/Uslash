@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    height: 100vh;
+}
+
+/* 메인 콘텐츠 */
+.container {
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+/* 설정 아이콘 */
+.settings-icon {
+    position: absolute;
+    top: 76px;
+    right: 18px;
+    z-index: 5;
+}
+
+/* 프로필 섹션 */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 142px;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #888;
+}
+
+.label {
+    color: #666;
+    margin-right: 10px;
+    color: #888;
+    font-family: "SF Pro";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 510;
+    line-height: 22px;
+}
+
+.value {
+    color: #666;
+    color: #888;
+    font-family: "SF Pro";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.edit-button {
+    background-color: #a278ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 즐겨찾기 섹션 */
+.favorites-section {
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.star-icon {
+    margin-left: 5px;
+    display: inline-flex;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid-item {
+    aspect-ratio: 1 / 1;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 하단 내비게이션 바 */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.nav-item.active {
+    color: #a278ff;
+}
+
+.nav-item span {
+    margin-top: 4px;
+}
