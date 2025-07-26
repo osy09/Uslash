@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 로컬 스토리지에 즐겨찾기 데이터를 저장할 때 사용할 키
-    const FAVORITES_STORAGE_KEY = 'myWorkoutFavorites';
+    // 로그인 상태 확인 및 보호
+    if (!AuthManager.requireAuth()) {
+        return;
+    }
+    
+    // 사용자 정보 표시 업데이트
+    AuthManager.updateUserDisplay();
+    
+    // 사용자별 즐겨찾기 데이터 키
+    const userId = AuthManager.getUserId();
+    const FAVORITES_STORAGE_KEY = `favorites_${userId}`;
 
     // --- 유틸리티 함수: 로컬 스토리지 관리 ---
     /**
@@ -36,6 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (editButton) {
         editButton.addEventListener('click', function() {
             alert('내 정보 수정 기능이 클릭되었습니다.');
+        });
+    }
+
+    // 설정 아이콘 클릭 이벤트 (로그아웃 메뉴 포함)
+    const settingsIcon = document.querySelector('.settings-icon');
+    if (settingsIcon) {
+        settingsIcon.addEventListener('click', function() {
+            const action = confirm('로그아웃 하시겠습니까?\n확인: 로그아웃\n취소: 설정');
+            if (action) {
+                AuthManager.logout();
+            } else {
+                alert('설정 페이지로 이동합니다.');
+            }
         });
     }
 

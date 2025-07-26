@@ -88,26 +88,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.search-icon {
-    width: 21.5px;
-    height: 21.5px;
-    border: 2px solid black;
-    border-radius: 50%;
-    position: relative;
+.search-button:hover {
+    background-color: #9654E6;
+    transform: scale(1.05);
 }
 
-.search-icon::after {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 2px;
-    background-color: black;
-    transform: rotate(45deg);
-    right: -4px;
-    bottom: 0;
+.search-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
+
+.search-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* 기존 search-icon 스타일은 SVG 사용으로 더 이상 필요 없음 */
 
 /* Tab Section */
 .tab-section {
@@ -148,7 +151,7 @@ body {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-top: 10px;
-    padding: 20px 0;
+    padding: 20px 0 110px 0;
     min-height: calc(100vh - 200px);
     overflow-y: auto;
 }
@@ -278,13 +281,17 @@ body {
 .bottom-nav {
     position: fixed;
     bottom: 0;
-    width: 393px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 393px;
     height: 92px;
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .nav-item {
