@@ -36,7 +36,14 @@ class AuthManager {
         localStorage.removeItem('userInfo');
         localStorage.removeItem('loginTime');
         this.clearUserData();
-        window.location.href = '../index.html';
+        
+        // 현재 페이지 위치에 따라 다른 경로로 이동
+        const currentPath = window.location.pathname;
+        if (currentPath.includes('/find/') || currentPath.includes('/mypage/') || currentPath.includes('/plan/')) {
+            window.location.href = '../index.html';
+        } else {
+            window.location.href = 'index.html';
+        }
     }
     
     // 사용자 데이터 클리어
@@ -52,7 +59,13 @@ class AuthManager {
     static requireAuth() {
         if (!this.isLoggedIn()) {
             alert('로그인이 필요한 서비스입니다.');
-            window.location.href = '../login/login.html';
+            // 현재 페이지 위치에 따라 다른 경로로 이동
+            const currentPath = window.location.pathname;
+            if (currentPath.includes('/find/') || currentPath.includes('/mypage/') || currentPath.includes('/plan/')) {
+                window.location.href = '../index.html';
+            } else {
+                window.location.href = 'index.html';
+            }
             return false;
         }
         return true;

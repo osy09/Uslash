@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 루틴 캘린더</title>
+    <link rel="stylesheet" href="./plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 헤더 -->
+        <div class="header">
+            <div class="date-selector">
+                <h1>
+                    <span class="year-value">2025</span>년 
+                    <span class="month-value">7</span>월 
+                    <span class="day-value">27</span>일
+                </h1>
+            </div>
+        </div>
+
+        <!-- 캘린더 -->
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="weekday">일</div>
+                <div class="weekday">월</div>
+                <div class="weekday">화</div>
+                <div class="weekday">수</div>
+                <div class="weekday">목</div>
+                <div class="weekday">금</div>
+                <div class="weekday">토</div>
+            </div>
+            
+            <div class="calendar-grid">
+                <!-- 첫 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell empty"></div>
+                    <div class="calendar-cell empty"></div>
+                    <div class="calendar-cell">
+                        <div class="date-number">1</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">2</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">3</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">4</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">5</div>
+                    </div>
+                </div>
+                
+                <!-- 두 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">6</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">7</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">8</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">9</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">10</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">11</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">12</div>
+                    </div>
+                </div>
+                
+                <!-- 세 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">13</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">14</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">15</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">16</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">17</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">18</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">19</div>
+                        <div class="routine-dot"></div>
+                    </div>
+                </div>
+                
+                <!-- 네 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">20</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">21</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">22</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">23</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">24</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">25</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">26</div>
+                        <div class="routine-dot"></div>
+                    </div>
+                </div>
+                
+                <!-- 다섯 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number current">27</div>
+                        <div class="routine-dot"></div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">28</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">29</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">30</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">31</div>
+                    </div>
+                    <div class="calendar-cell empty"></div>
+                    <div class="calendar-cell empty"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 선택된 날짜의 루틴 -->
+        <div class="selected-date-routines">
+            <div class="section-header">
+                <h3>오늘의 루틴</h3>
+                <button class="add-routine-btn" id="addRoutineBtn">+ 루틴 추가</button>
+            </div>
+            
+            <div class="routines-list" id="routinesList">
+                <!-- 루틴이 없을 때 표시 -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📅</div>
+                    <p>아직 루틴이 없습니다</p>
+                    <p class="empty-subtitle">새로운 루틴을 추가해보세요!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 루틴 추가 모달 -->
+    <div class="modal-overlay" id="routineModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>루틴 추가하기</h3>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            
+            <div class="routine-options">
+                <div class="option-card" data-routine="아이유 다이어트">
+                    <div class="option-icon">🥗</div>
+                    <div class="option-info">
+                        <h4>아이유 다이어트</h4>
+                        <p>단백질 위주의 건강한 식단</p>
+                    </div>
+                </div>
+                
+                <div class="option-card" data-routine="로제 필라테스">
+                    <div class="option-icon">🧘‍♀️</div>
+                    <div class="option-info">
+                        <h4>로제 필라테스</h4>
+                        <p>코어 강화 운동 루틴</p>
+                    </div>
+                </div>
+                
+                <div class="option-card" data-routine="지수 홈트레이닝">
+                    <div class="option-icon">💪</div>
+                    <div class="option-info">
+                        <h4>지수 홈트레이닝</h4>
+                        <p>집에서 하는 전신 운동</p>
+                    </div>
+                </div>
+                
+                <div class="option-card" data-routine="custom">
+                    <div class="option-icon">✏️</div>
+                    <div class="option-info">
+                        <h4>직접 입력</h4>
+                        <p>나만의 루틴 만들기</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 커스텀 루틴 입력 -->
+            <div class="custom-routine-input" id="customRoutineInput" style="display: none;">
+                <input type="text" id="customRoutineName" placeholder="루틴 이름을 입력하세요" maxlength="20">
+                <textarea id="customRoutineDescription" placeholder="루틴 설명을 입력하세요 (선택사항)" rows="3"></textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn-cancel" id="cancelBtn">취소</button>
+                <button class="btn-confirm" id="confirmBtn">추가</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-navigation">
+        <a href="../find/find.html" class="nav-item">
+            <div class="nav-icon">🔍</div>
+            <div class="nav-label">탐색</div>
+        </a>
+        <a href="plan.html" class="nav-item active">
+            <div class="nav-icon">📅</div>
+            <div class="nav-label">캘린더</div>
+        </a>
+        <a href="../mypage/mypage.html" class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">마이페이지</div>
+        </a>
+        <div class="nav-item" onclick="AuthManager.logout()">
+            <div class="nav-icon">🚪</div>
+            <div class="nav-label">로그아웃</div>
+        </div>
+    </div>
+
+    <script src="../auth.js"></script>
+    <script src="plan.js"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@ class SignupForm {
     initializeEventListeners() {
         // 로그인 상태 체크
         if (AuthManager.isLoggedIn()) {
-            window.location.href = '../find/find.html';
+            window.location.href = 'find/find.html';
             return;
         }
 
@@ -390,7 +390,7 @@ class SignupForm {
 
                 // 메인 페이지로 리다이렉트
                 setTimeout(() => {
-                    window.location.href = '../find/find.html';
+                    window.location.href = 'find/find.html';
                 }, 1500);
                 
             } else {

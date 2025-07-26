@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 이미 로그인된 사용자는 메인 페이지로 리다이렉트
     if (AuthManager.isLoggedIn()) {
-        window.location.href = '../find/find.html';
+        window.location.href = 'find/find.html';
         return;
     }
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 성공 메시지 표시 후 리다이렉트
             showSuccess('로그인 성공! 메인 페이지로 이동합니다.');
             setTimeout(() => {
-                window.location.href = '../find/find.html';
+                window.location.href = 'find/find.html';
             }, 1000);
         } else {
             showError('아이디 또는 비밀번호가 올바르지 않습니다.');
@@ -82,11 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 회원가입 페이지로 이동
-    const signupLink = document.querySelector('a[href="../signup/signup.html"]');
+    const signupLink = document.querySelector('a[href="signup/signup.html"]');
     if (signupLink) {
         signupLink.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = '../signup/signup.html';
+            window.location.href = 'signup/signup.html';
         });
     }
 });
