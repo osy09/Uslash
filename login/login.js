@@ -100,7 +100,15 @@ loginForm.addEventListener('submit', function(e) {
 
     // Simulate login process
     setTimeout(() => {
-        alert(`로그인 시도:\n아이디: ${userId}\n비밀번호: ${'*'.repeat(password.length)}`);
+        // 로그인 성공 시 메인 페이지로 이동
+        alert(`로그인 성공!\n아이디: ${userId}`);
+        
+        // 실제 프로젝트에서는 서버 인증 후 토큰 저장 등을 수행
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userId', userId);
+        
+        // 메인 페이지 또는 대시보드로 이동
+        window.location.href = '../find/find.html';
         
         // Re-enable button
         loginButton.disabled = false;
@@ -112,16 +120,18 @@ loginForm.addEventListener('submit', function(e) {
 findIdLink.addEventListener('click', function(e) {
     e.preventDefault();
     alert('아이디 찾기 페이지로 이동합니다.');
+    // TODO: 실제 아이디 찾기 페이지 구현
 });
 
 findPasswordLink.addEventListener('click', function(e) {
     e.preventDefault();
     alert('비밀번호 찾기 페이지로 이동합니다.');
+    // TODO: 실제 비밀번호 찾기 페이지 구현
 });
 
 signUpLink.addEventListener('click', function(e) {
     e.preventDefault();
-    alert('회원가입 페이지로 이동합니다.');
+    window.location.href = '../signup/signup.html';
 });
 
 // Mobile keyboard handling

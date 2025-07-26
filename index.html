@@ -91,6 +91,34 @@
         <a href="./signup/signup.html" class="btn btn-secondary">회원가입</a>
         <a href="./logo.html" class="btn btn-secondary">logo</a>
         <a href="./mypage/mypage.html" class="btn btn-secondary">마이페이지</a>
+        <a href="./find/find.html" class="btn btn-secondary">탐색</a>
+        <a href="./plan/plan.html" class="btn btn-secondary">루틴</a>
     </div>
+
+    <script>
+        // 버튼 클릭 효과 추가
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // 클릭 효과
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+                
+                // 호버 효과 강화
+                button.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 12px 25px rgba(0, 0, 0, 0.2)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
