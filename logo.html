@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-chase 로고 디자인 - 연예인 라이프스타일 큐레이션 앱</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#A963FF',
+                        secondary: '#7C3AED'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        
+        .logo-gradient {
+            background: linear-gradient(135deg, #A963FF 0%, #7C3AED 100%);
+        }
+        
+        .logo-shadow {
+            box-shadow: 0 10px 30px rgba(169, 99, 255, 0.3);
+        }
+        
+        .logo-text-shadow {
+            text-shadow: 0 2px 10px rgba(169, 99, 255, 0.3);
+        }
+        
+        .logo-animation {
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(169, 99, 255, 0.1) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-indigo-50 min-h-screen">
+    <div class="grid-pattern min-h-screen">
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">I-chase 로고 디자인</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">연예인들의 식단, 피부, 운동 루틴을 한 눈에 모아보고 쉽게 따라할 수 있는 서비스</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-white rounded-2xl p-8 logo-shadow">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">메인 로고</h2>
+                    <div class="flex items-center justify-center h-64 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl mb-6">
+                        <div class="text-center logo-animation">
+                            <div class="flex items-center justify-center mb-4">
+                                <div class="w-16 h-16 logo-gradient rounded-full flex items-center justify-center mr-4">
+                                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="text-5xl font-bold text-primary logo-text-shadow">I-chase</div>
+                            </div>
+                            <div class="text-sm text-gray-500 font-medium">연예인 라이프스타일 큐레이션</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">#A963FF</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 logo-shadow">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">아이콘 버전</h2>
+                    <div class="flex items-center justify-center h-64 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl mb-6">
+                        <div class="w-24 h-24 logo-gradient rounded-2xl flex items-center justify-center logo-animation">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+                                <div class="w-6 h-6 bg-primary rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="inline-block bg-secondary text-white px-4 py-2 rounded-full text-sm font-medium">앱 아이콘</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-xl p-6 logo-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">가로형 버전</h3>
+                    <div class="flex items-center justify-center h-32 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 logo-gradient rounded-full flex items-center justify-center mr-3">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-2xl font-bold text-primary">I-chase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 logo-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">세로형 버전</h3>
+                    <div class="flex items-center justify-center h-32 bg-gradient-to-b from-purple-50 to-indigo-50 rounded-lg">
+                        <div class="text-center">
+                            <div class="w-8 h-8 logo-gradient rounded-full flex items-center justify-center mx-auto mb-2">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-bold text-primary">I-chase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 logo-shadow">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">단색 버전</h3>
+                    <div class="flex items-center justify-center h-32 bg-gray-100 rounded-lg">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-2xl font-bold text-gray-800">I-chase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-white rounded-2xl p-8 logo-shadow">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">로고 컨셉</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-star-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">연예인 라이프스타일</h4>
+                                <p class="text-gray-600 text-sm">식단, 피부관리, 운동 루틴을 한 눈에</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-user-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">개인화된 경험</h4>
+                                <p class="text-gray-600 text-sm">사용자가 쉽게 따라할 수 있는 서비스</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-palette-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">브랜드 아이덴티티</h4>
+                                <p class="text-gray-600 text-sm">모던하고 세련된 보라색 톤</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 logo-shadow">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">색상 가이드</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary rounded-lg mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Primary Color</h4>
+                                <p class="text-gray-600 text-sm">#A963FF</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-secondary rounded-lg mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Secondary Color</h4>
+                                <p class="text-gray-600 text-sm">#7C3AED</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-lg mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Text Color</h4>
+                                <p class="text-gray-600 text-sm">#1F2937</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white border-2 border-gray-200 rounded-lg mr-4"></div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Background</h4>
+                                <p class="text-gray-600 text-sm">#FFFFFF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-8 logo-shadow">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">사용 가이드라인</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-check-line text-green-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">최소 크기</h4>
+                        <p class="text-gray-600 text-sm">24px 이상 사용</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-space-line text-blue-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">여백 규정</h4>
+                        <p class="text-gray-600 text-sm">로고 높이의 1/2</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-palette-line text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">색상 활용</h4>
+                        <p class="text-gray-600 text-sm">지정된 색상만 사용</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-close-line text-red-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">사용 금지</h4>
+                        <p class="text-gray-600 text-sm">왜곡, 임의 색상 변경</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <div class="inline-flex items-center bg-white rounded-full px-6 py-3 logo-shadow">
+                    <div class="w-8 h-8 logo-gradient rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 bg-white rounded-full"></div>
+                    </div>
+                    <span class="text-lg font-bold text-primary">I-chase</span>
+                    <span class="text-gray-400 mx-2">|</span>
+                    <span class="text-gray-600">연예인 라이프스타일 큐레이션</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
