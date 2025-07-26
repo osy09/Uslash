@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 서버 API 주소를 정확히 확인하여 수정하세요!
         // 예: 'http://localhost:8080/api/favorites/workout-routines'
         // 또는 실제 배포 환경 주소 'https://your-domain.com/api/favorites/workout-routines'
-        fetch('https://4e20c4b6ea3d.ngrok-free.app')
+        fetch('https://a20911f9aedc.ngrok-free.app')
             .then(response => {
                 if (!response.ok) { // HTTP 상태 코드가 200번대가 아니면 오류 처리
                     throw new Error(`HTTP error! status: ${response.status}`);
