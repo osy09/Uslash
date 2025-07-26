@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 루틴 캘린더</title>
+    <link rel="stylesheet" href="./plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- 메인 컨텐츠 -->
+        <div class="main-content">
+            <div class="header">
+                <h1><span class="purple">나의 루틴</span> 캘린더</h1>
+                
+                <div class="date-selector">
+                    <div class="year-container">
+                        <div class="year-value">2025</div>
+                        <div class="year-label">년</div>
+                    </div>
+                    <div class="month-container">
+                        <div class="month-value">7</div>
+                        <div class="month-label">월</div>
+                    </div>
+                    <div class="day-container">
+                        <div class="day-value">26</div>
+                        <div class="day-label">일</div>
+                    </div>
+                    <button class="search-small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.37498 0.833328C3.81023 0.833376 3.25368 0.96848 2.75176 1.22737C2.24984 1.48625 1.81711 1.86142 1.48967 2.32156C1.16222 2.7817 0.949571 3.31347 0.869445 3.87251C0.78932 4.43155 0.844046 5.00165 1.02906 5.53524C1.21407 6.06883 1.524 6.55043 1.933 6.93988C2.34199 7.32933 2.83819 7.61532 3.3802 7.774C3.9222 7.93267 4.49429 7.95943 5.04874 7.85204C5.60319 7.74465 6.12392 7.50623 6.56748 7.15666L8.08915 8.67833C8.16773 8.75423 8.27298 8.79623 8.38223 8.79528C8.49148 8.79433 8.59599 8.75051 8.67324 8.67325C8.75049 8.596 8.79431 8.49149 8.79526 8.38225C8.79621 8.273 8.75422 8.16775 8.67832 8.08916L7.15665 6.5675C7.56831 6.04525 7.82463 5.41766 7.89627 4.75655C7.96791 4.09543 7.85198 3.4275 7.56174 2.8292C7.2715 2.2309 6.81869 1.72639 6.25511 1.37342C5.69153 1.02046 5.03997 0.833284 4.37498 0.833328ZM1.66665 4.37499C1.66665 3.6567 1.95199 2.96783 2.4599 2.45991C2.96781 1.952 3.65669 1.66666 4.37498 1.66666C5.09328 1.66666 5.78215 1.952 6.29006 2.45991C6.79798 2.96783 7.08332 3.6567 7.08332 4.37499C7.08332 5.09329 6.79798 5.78217 6.29006 6.29008C5.78215 6.79799 5.09328 7.08333 4.37498 7.08333C3.65669 7.08333 2.96781 6.79799 2.4599 6.29008C1.95199 5.78217 1.66665 5.09329 1.66665 4.37499Z" fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 검색 버튼 -->
+            <div class="search-button">
+                <div class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M10.5616 2.84961C12.3853 2.84949 14.1724 3.36309 15.7179 4.33105C17.2633 5.29899 18.505 6.68258 19.3009 8.32324C20.0968 9.96385 20.4152 11.7956 20.2189 13.6084C20.0272 15.3769 19.3514 17.057 18.2706 18.4678L22.2892 22.4863C22.5214 22.7268 22.6495 23.0495 22.6466 23.3838C22.6436 23.7177 22.5096 24.0372 22.2736 24.2734C22.0372 24.5098 21.7171 24.6445 21.3829 24.6475C21.0486 24.6504 20.7259 24.5213 20.4855 24.2891L16.4679 20.2715C15.2748 21.1855 13.8861 21.8116 12.4093 22.0977C10.889 22.3921 9.32032 22.3188 7.83411 21.8838C6.3479 21.4487 4.9869 20.6645 3.86536 19.5967C2.74374 18.5287 1.89323 17.2074 1.38586 15.7441C0.87856 14.2809 0.728653 12.7176 0.948364 11.1846C1.16809 9.65153 1.75163 8.19348 2.64954 6.93164C3.54749 5.66977 4.73403 4.64062 6.11047 3.93066C7.48685 3.22075 9.01297 2.84977 10.5616 2.84961ZM10.5616 5.40039C8.66209 5.40043 6.84038 6.15486 5.49719 7.49805C4.15401 8.84127 3.39954 10.6629 3.39954 12.5625C3.39954 14.4621 4.15401 16.2837 5.49719 17.627C6.84038 18.9701 8.66209 19.7246 10.5616 19.7246C12.4612 19.7246 14.2829 18.9701 15.6261 17.627C16.9693 16.2837 17.7247 14.4621 17.7247 12.5625C17.7247 10.6629 16.9693 8.84128 15.6261 7.49805C14.2829 6.15487 12.4612 5.40039 10.5616 5.40039Z" fill="white" stroke="white" stroke-width="0.3"/>
+                    </svg>
+
+                </div>
+            </div>
+
+            <!-- 요일 헤더 -->
+            <div class="days-header">
+                <div class="day-name">일</div>
+                <div class="day-name">월</div>
+                <div class="day-name">화</div>
+                <div class="day-name">수</div>
+                <div class="day-name">목</div>
+                <div class="day-name">금</div>
+                <div class="day-name">토</div>
+            </div>
+
+            <!-- 캘린더 -->
+            <div class="calendar">
+                <!-- 첫 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">01</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">02</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">03</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">04</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number purple">05</div>
+                    </div>
+                    <div class="calendar-cell weekend-left">
+                        <div class="date-number purple">06</div>
+                    </div>
+                    <div class="calendar-cell weekend-right">
+                        <div class="date-number">07</div>
+                    </div>
+                </div>
+                
+                <!-- 두 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">08</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">09</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">10</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">11</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number purple">12</div>
+                    </div>
+                    <div class="calendar-cell weekend-left">
+                        <div class="date-number purple">13</div>
+                    </div>
+                    <div class="calendar-cell weekend-right">
+                        <div class="date-number">14</div>
+                    </div>
+                </div>
+                
+                <!-- 세 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">15</div>
+                        <div class="event-bar">
+                            <div class="event-dot"></div>
+                        </div>
+                        <div class="event-text">사과 슬라이드</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">16</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">17</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">18</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number purple">19</div>
+                    </div>
+                    <div class="calendar-cell weekend-left">
+                        <div class="date-number purple">20</div>
+                    </div>
+                    <div class="calendar-cell weekend-right">
+                        <div class="date-number">21</div>
+                    </div>
+                </div>
+                
+                <!-- 네 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">22</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">23</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">24</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">25</div>
+                    </div>
+                    <div class="calendar-cell active">
+                        <div class="date-number purple">26</div>
+                    </div>
+                    <div class="calendar-cell weekend-left">
+                        <div class="date-number purple">27</div>
+                    </div>
+                    <div class="calendar-cell weekend-right">
+                        <div class="date-number">28</div>
+                    </div>
+                </div>
+                
+                <!-- 다섯 번째 줄 -->
+                <div class="calendar-row">
+                    <div class="calendar-cell">
+                        <div class="date-number">29</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">30</div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="date-number">31</div>
+                    </div>
+                    <div class="calendar-cell"></div>
+                    <div class="calendar-cell"></div>
+                    <div class="calendar-cell"></div>
+                    <div class="calendar-cell"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단 네비게이션 -->
+        <div class="bottom-nav">
+            <div class="nav-item">
+                <div class="nav-icon explore-icon"></div>
+                <span>탐색</span>
+            </div>
+            <div class="nav-item active">
+                <div class="nav-icon routine-icon"></div>
+                <span>루틴</span>
+            </div>
+            <div class="nav-item">
+                <div class="nav-icon mypage-icon"></div>
+                <span>마이 페이지</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
