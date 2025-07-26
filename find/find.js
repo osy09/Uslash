@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "category": "가수",
                     "personName": "아이유",
                     "routineTitle": "사과 아침 식단",
-                    "routineImage": "https://previews.123rf.com/images/belchonock/belchonock1504/belchonock150405021/38931531-sliced-apple-isolated-on-white.jpg",
+                    "routineImage": "./images/image.png",
                     "description": "사과 1개, 고구마 1개, 단백질 셰이크로 구성된 아침 식단입니다."
                 },
                 {
