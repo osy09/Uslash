@@ -3,157 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diet and Exercise App</title>
+    <title>나의 루틴 캘린더</title>
     <link rel="stylesheet" href="find.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;500;590;600&family=Palanquin+Dark:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
-        <!-- Search Button -->
+        <!-- 검색 버튼 -->
         <div class="search-button">
-            <div class="search-icon"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="8" stroke="white" stroke-width="2"/>
+                <path d="m21 21-4.35-4.35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
         </div>
 
-        <!-- Tab Section -->
-        <div class="tab-section">
-            <div class="tab active">
-                <span>식단</span>
-            </div>
-            <div class="tab">
-                <span class="purple-text">운동</span>
-            </div>
+        <!-- 제목 -->
+        <div class="page-title">
+            <span class="title-purple">나의 루틴</span> 캘린더
         </div>
-        <!-- <div class="modal-overlay">
-            <div class="modal-content">
-                <button class="modal-close-button">&times;</button>
-                <div class="modal-title">루틴에 식단을 추가했어요!</div>
-                <div class="modal-message">
-                    <span class="highlight">나의 루틴</span>에서<br>추가된 식단을 확인해 보세요.
-                </div>
-            </div>
-        </div> -->
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Category Filter -->
-            <div class="category-filter">
-                <div class="filter-pill active">가수</div>
-                <div class="filter-pill">배우</div>
-                <div class="filter-pill">아이돌</div>
-                <div class="filter-pill">기타</div>
-            </div>
 
-            <!-- Diet Cards -->
-            <div class="diet-cards">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img class="card-image" src="https://via.placeholder.com/105x105" alt="Apple slices">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>권은비</h3>
-                            <p class="subtitle">사과 슬라이드</p>
-                        </div>
-                        <p class="card-description">
-                            사과를 슬라이드로 잘라 시간별로 섭취하여<br>하루에 사과 하나씩 섭취
-                        </p>
-                    </div>
-                    <div class="add-button">
-                        <div class="plus-icon"></div>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="card">
-                    <img class="card-image" src="https://via.placeholder.com/105x105" alt="Apple slices">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>권은비</h3>
-                            <p class="subtitle">사과 슬라이드</p>
-                        </div>
-                        <p class="card-description">
-                            사과를 슬라이드로 잘라 시간별로 섭취하여<br>하루에 사과 하나씩 섭취
-                        </p>
-                    </div>
-                    <div class="add-button">
-                        <div class="plus-icon"></div>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="card">
-                    <img class="card-image" src="https://via.placeholder.com/105x105" alt="Apple slices">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>권은비</h3>
-                            <p class="subtitle">사과 슬라이드</p>
-                        </div>
-                        <p class="card-description">
-                            사과를 슬라이드로 잘라 시간별로 섭취하여<br>하루에 사과 하나씩 섭취
-                        </p>
-                    </div>
-                    <div class="add-button">
-                        <div class="plus-icon"></div>
-                    </div>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="card">
-                    <img class="card-image" src="https://via.placeholder.com/105x105" alt="Apple slices">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>권은비</h3>
-                            <p class="subtitle">사과 슬라이드</p>
-                        </div>
-                        <p class="card-description">
-                            사과를 슬라이드로 잘라 시간별로 섭취하여<br>하루에 사과 하나씩 섭취
-                        </p>
-                    </div>
-                    <div class="add-button">
-                        <div class="plus-icon"></div>
-                    </div>
-                </div>
-                
-                <!-- Card 5 -->
-                <div class="card">
-                    <img class="card-image" src="https://via.placeholder.com/105x105" alt="Apple slices">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>권은비</h3>
-                            <p class="subtitle">사과 슬라이드</p>
-                        </div>
-                        <p class="card-description">
-                            사과를 슬라이드로 잘라 시간별로 섭취하여<br>하루에 사과 하나씩 섭취
-                        </p>
-                    </div>
-                    <div class="add-button">
-                        <div class="plus-icon"></div>
-                    </div>
-                </div>
-                
-                <!-- Card 6 -->
-                <div class="card">
-                    <img class="card-image" src="https://via.placeholder.com/105x105" alt="Apple slices">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>권은비</h3>
-                            <p class="subtitle">사과 슬라이드</p>
-                        </div>
-                        <p class="card-description">
-                            사과를 슬라이드로 잘라 시간별로 섭취하여<br>하루에 사과 하나씩 섭취
-                        </p>
-                    </div>
-                    <div class="add-button">
-                        <div class="plus-icon"></div>
-                    </div>
-                </div>
+        <!-- 요일 헤더 -->
+        <div class="weekday-header">
+            <div class="weekday">일</div>
+            <div class="weekday">월</div>
+            <div class="weekday">화</div>
+            <div class="weekday">수</div>
+            <div class="weekday">목</div>
+            <div class="weekday">금</div>
+            <div class="weekday">토</div>
+        </div>
+
+        <!-- 날짜 선택기 -->
+        <div class="date-selector">
+            <div class="date-input year">
+                <span class="date-value purple">2025</span>
+                <span class="date-label">년</span>
+            </div>
+            <div class="date-input month">
+                <span class="date-value purple">7</span>
+                <span class="date-label">월</span>
+            </div>
+            <div class="date-input day">
+                <span class="date-value purple">26</span>
+                <span class="date-label">일</span>
+            </div>
+            <div class="date-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <circle cx="5" cy="5" r="4" fill="white" stroke="#A963FF" stroke-width="1"/>
+                    <path d="M3 5L4.5 6.5L7 3.5" stroke="#A963FF" stroke-width="1.5" fill="none"/>
+                </svg>
             </div>
         </div>
 
-        <!-- Bottom Navigation -->
+        <!-- 캘린더 -->
+        <div class="calendar-container">
+            <div class="calendar-grid">
+                <!-- 1주차 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <span class="day-number">01</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">02</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">03</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">04</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">05</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">06</span>
+                </div>
+
+                <!-- 2주차 -->
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">07</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">08</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">09</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">10</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">11</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">12</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">13</span>
+                </div>
+
+                <!-- 3주차 -->
+                <div class="calendar-day">
+                    <span class="day-number">14</span>
+                </div>
+                <div class="calendar-day highlight">
+                    <span class="day-number">15</span>
+                    <div class="routine-indicator"></div>
+                    <div class="routine-label">사과 슬라이드</div>
+                    <div class="routine-progress"></div>
+                    <div class="routine-dot"></div>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">16</span>
+                    <div class="routine-dot"></div>
+                    <div class="routine-dot"></div>
+                    <div class="routine-dot"></div>
+                    <div class="routine-item">두부죽</div>
+                    <div class="routine-item">두부월남쌈</div>
+                    <div class="routine-item">두부전</div>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">17</span>
+                    <div class="routine-dot"></div>
+                    <div class="routine-dot"></div>
+                    <div class="routine-dot"></div>
+                    <div class="routine-item">갈아만든 주스</div>
+                    <div class="routine-item">호박즙 한 포</div>
+                    <div class="routine-item">호박즙 한 포</div>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">18</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">19</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">20</span>
+                </div>
+
+                <!-- 4주차 -->
+                <div class="calendar-day">
+                    <span class="day-number">21</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">22</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">23</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">24</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">25</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">26</span>
+                </div>
+                <div class="calendar-day weekend">
+                    <span class="day-number purple">27</span>
+                </div>
+
+                <!-- 5주차 -->
+                <div class="calendar-day">
+                    <span class="day-number">28</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">29</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">30</span>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">31</span>
+                </div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+
+            <!-- 하단 루틴 정보 -->
+            <div class="routine-info-section">
+                <div class="routine-info-card">
+                    <div class="routine-card-header">
+                        <h3>권은비</h3>
+                        <div class="routine-date">2025. 7.15~2025. 7.16</div>
+                        <div class="routine-subtitle">사과슬라이드</div>
+                    </div>
+                    <div class="routine-share-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="#898989">
+                            <path d="M8 3L5 0L2 3M5 0V7M1 8H9"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 식사 시간 라벨 -->
+                <div class="meal-time-labels">
+                    <div class="meal-label">아침</div>
+                    <div class="meal-label">점심</div>
+                    <div class="meal-label">저녁</div>
+                </div>
+
+                <!-- 식사 카드들 -->
+                <div class="meal-cards">
+                    <div class="meal-card">
+                        <p>사과를 슬라이드로 잘라<br/>시간별로 섭취하여<br/>하루에 사과 하나씩 섭취<br/>(아침 할당량)</p>
+                    </div>
+                    <div class="meal-card">
+                        <p>사과를 슬라이드로 잘라<br/>시간별로 섭취하여<br/>하루에 사과 하나씩 섭취<br/>(점심 할당량)</p>
+                    </div>
+                    <div class="meal-card">
+                        <p>사과를 슬라이드로 잘라<br/>시간별로 섭취하여<br/>하루에 사과 하나씩 섭취<br/>(저녁 할당량)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단 네비게이션 -->
         <div class="bottom-nav">
             <div class="nav-item active">
                 <div class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                        <path d="M29.8875 14.2875L20.7375 18.0375C20.1097 18.2855 19.5394 18.6597 19.0621 19.137C18.5847 19.6144 18.2105 20.1846 17.9625 20.8125L14.2125 29.9625C14.1509 30.1192 14.1538 30.2939 14.2206 30.4484C14.2873 30.603 14.4125 30.7249 14.5688 30.7875C14.72 30.8435 14.8863 30.8435 15.0375 30.7875L24.1875 27.0375C24.8154 26.7895 25.3856 26.4153 25.863 25.9379C26.3403 25.4606 26.7145 24.8903 26.9625 24.2625L30.7125 15.1125C30.7741 14.9558 30.7712 14.7811 30.7045 14.6265C30.6377 14.472 30.5126 14.3501 30.3563 14.2875C30.205 14.2315 30.0388 14.2315 29.8875 14.2875ZM22.5 24.375C22.1292 24.375 21.7667 24.265 21.4583 24.059C21.15 23.853 20.9097 23.5601 20.7678 23.2175C20.6258 22.8749 20.5887 22.4979 20.6611 22.1342C20.7334 21.7705 20.912 21.4364 21.1742 21.1742C21.4364 20.9119 21.7705 20.7334 22.1342 20.661C22.4979 20.5887 22.8749 20.6258 23.2176 20.7677C23.5602 20.9096 23.853 21.1499 24.059 21.4583C24.2651 21.7666 24.375 22.1291 24.375 22.5C24.375 22.9973 24.1775 23.4742 23.8258 23.8258C23.4742 24.1774 22.9973 24.375 22.5 24.375Z" fill="#A963FF"/>
-                        <path d="M22.5 39.375C19.1624 39.375 15.8998 38.3853 13.1248 36.5311C10.3497 34.6768 8.18677 32.0413 6.90954 28.9578C5.63231 25.8743 5.29813 22.4813 5.94926 19.2079C6.60038 15.9344 8.20757 12.9276 10.5676 10.5676C12.9276 8.20757 15.9344 6.60038 19.2079 5.94926C22.4813 5.29813 25.8743 5.63231 28.9578 6.90954C32.0413 8.18677 34.6768 10.3497 36.5311 13.1248C38.3853 15.8998 39.375 19.1624 39.375 22.5C39.375 26.9755 37.5971 31.2678 34.4324 34.4324C31.2678 37.5971 26.9755 39.375 22.5 39.375ZM22.5 8.43751C19.7187 8.43751 16.9999 9.26226 14.6873 10.8075C12.3747 12.3527 10.5723 14.5489 9.50795 17.1185C8.44359 19.6881 8.16511 22.5156 8.70771 25.2435C9.25032 27.9713 10.5896 30.477 12.5563 32.4437C14.523 34.4104 17.0287 35.7497 19.7565 36.2923C22.4844 36.8349 25.3119 36.5564 27.8815 35.4921C30.4511 34.4277 32.6473 32.6253 34.1926 30.3127C35.7378 28.0001 36.5625 25.2813 36.5625 22.5C36.5625 18.7704 35.0809 15.1935 32.4437 12.5563C29.8065 9.91909 26.2296 8.43751 22.5 8.43751Z" fill="#A963FF"/>
+                        <circle cx="22.5" cy="22.5" r="16.87" fill="#A963FF"/>
+                        <path d="M29.88 14.29L20.74 18.04C20.11 18.29 19.54 18.66 19.06 19.14C18.58 19.61 18.21 20.18 17.96 20.81L14.21 29.96C14.15 30.12 14.15 30.29 14.22 30.45C14.29 30.60 14.41 30.72 14.57 30.79C14.72 30.84 14.89 30.84 15.04 30.79L24.19 27.04C24.82 26.79 25.39 26.42 25.86 25.94C26.34 25.46 26.71 24.89 26.96 24.26L30.71 15.11C30.77 14.96 30.77 14.78 30.70 14.63C30.64 14.47 30.51 14.35 30.36 14.29C30.20 14.23 30.04 14.23 29.88 14.29ZM22.50 24.38C22.13 24.38 21.77 24.27 21.46 24.06C21.15 23.85 20.91 23.56 20.77 23.22C20.63 22.87 20.59 22.50 20.66 22.13C20.73 21.77 20.91 21.44 21.17 21.17C21.44 20.91 21.77 20.73 22.13 20.66C22.50 20.59 22.87 20.63 23.22 20.77C23.56 20.91 23.85 21.15 24.06 21.46C24.27 21.77 24.38 22.13 24.38 22.50C24.38 23.00 24.18 23.47 23.83 23.83C23.47 24.18 23.00 24.38 22.50 24.38Z" fill="white"/>
                     </svg>
                 </div>
                 <span class="nav-text">탐색</span>
