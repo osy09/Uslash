@@ -1,24 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;500;590;600&family=Palanquin+Dark:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'SF Pro', sans-serif;
 }
 
 body {
-    font-family: 'SF Pro', sans-serif;
     background-color: white;
     overflow-x: hidden;
 }
 
 .app-container {
-    width: 393px;
-    height: 852px;
-    position: relative;
-    background: white;
-    overflow: hidden;
+    width: 100%;
+    max-width: 393px;
+    height: 100vh;
     margin: 0 auto;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 80px;
 }
 
 /* 상태바 */
